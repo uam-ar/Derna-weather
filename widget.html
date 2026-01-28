@@ -1,171 +1,207 @@
 <!doctype html>
-<html>
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Campus Weather</title>
+  <title>طقس الحرم الجامعي – جامعة درنة</title>
 
   <style>
-    body { font-family: system-ui, Arial, sans-serif; margin: 0; background: transparent; }
-    .card {
-      border: 1px solid #ddd;
-      border-radius: 18px;
+    :root{
+      --card-bg: #f5f4ef;
+      --border: rgba(0,0,0,.10);
+      --text: #111;
+      --muted: rgba(0,0,0,.65);
+      --muted2: rgba(0,0,0,.45);
+      --shadow: 0 10px 30px rgba(0,0,0,.08);
+      --radius: 18px;
+    }
+    html, body { margin:0; padding:0; background: transparent; color: var(--text); font-family: system-ui, "Tahoma", "Arial", sans-serif; }
+
+    .card{
+      width:100%;
+      max-width: 860px;
+      box-sizing: border-box;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
       padding: 16px;
-      max-width: 920px;
-      background: #f5f4ef;
+      background: var(--card-bg);
+      box-shadow: var(--shadow);
     }
 
-    .title {
-      font-size: 20px;
-      font-weight: 800;
-      display: flex;
-      align-items: center;
+    .header{
+      display:flex;
+      align-items:flex-start;
       justify-content: space-between;
       gap: 12px;
+      margin-bottom: 10px;
+      flex-direction: row-reverse;
     }
 
-    .pill {
+    .titleWrap{ display:flex; flex-direction: column; gap: 4px; text-align: right; }
+    .title{ font-size: 20px; font-weight: 900; }
+    .subtitle{ font-size: 12px; color: var(--muted); }
+
+    .pill{
       font-size: 12px;
       padding: 4px 10px;
       border-radius: 999px;
-      border: 1px solid rgba(0,0,0,.12);
-      opacity: .9;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,.6);
       white-space: nowrap;
-    }
-
-    .muted { opacity: .75; font-size: 12px; margin-top: 10px; }
-
-    .nowWrap{
-      margin-top: 12px;
-      display: flex;
-      gap: 12px;
-      align-items: stretch;
-      flex-wrap: wrap;
-    }
-
-    .nowBox{
-      flex: 1 1 360px;
-      border: 1px solid rgba(0,0,0,.10);
-      border-radius: 16px;
-      padding: 12px;
-      background: rgba(255,255,255,.35);
-    }
-
-    .nowLine { font-size: 16px; font-weight: 800; margin-bottom: 4px; }
-    .subLine { font-size: 13px; opacity: .9; }
-    .icon { font-size: 22px; margin-right: 8px; vertical-align: -2px; }
-
-    .comfort{
-      margin-top: 8px;
-      font-size: 13px;
-      padding: 8px 10px;
-      border-radius: 12px;
-      border: 1px solid rgba(0,0,0,.10);
-      background: rgba(0,0,0,.03);
       font-weight: 650;
+      color: rgba(0,0,0,.75);
     }
 
-    .hourlyBox{
-      flex: 1 1 360px;
-      border: 1px solid rgba(0,0,0,.10);
-      border-radius: 16px;
+    .status{ font-size: 12px; color: var(--muted); margin-top: 6px; text-align:right; }
+
+    .nowRow{
+      display:flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 10px;
       padding: 12px;
-      background: rgba(255,255,255,.35);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: rgba(255,255,255,.55);
+      flex-direction: row-reverse;
     }
 
-    .boxTitle{
-      font-weight: 900;
+    .bigIcon{
+      width: 52px; height: 52px;
+      display:grid; place-items:center;
+      font-size: 30px;
+      border-radius: 14px;
+      background: rgba(0,0,0,.04);
+      border: 1px solid rgba(0,0,0,.06);
+      flex: 0 0 auto;
+    }
+
+    .nowMain{ flex: 1 1 auto; min-width: 0; text-align:right; }
+    .nowLine{ font-size: 16px; font-weight: 800; line-height: 1.25; margin-bottom: 4px; }
+
+    .nowMeta{
       font-size: 13px;
-      opacity: .85;
-      margin-bottom: 8px;
+      color: var(--muted);
+      line-height: 1.3;
       display:flex;
-      justify-content: space-between;
-      gap: 8px;
-      align-items: baseline;
-    }
-
-    canvas { display:block; width: 100%; height: 110px; }
-
-    .sectionTitle {
-      font-weight: 900;
-      margin-top: 14px;
-      margin-bottom: 8px;
-    }
-
-    table { width: 100%; border-collapse: collapse; margin-top: 8px; font-size: 13px; }
-    th, td { padding: 9px 10px; border-bottom: 1px solid rgba(0,0,0,.08); }
-    th { text-align: left; font-weight: 800; opacity: .9; }
-    td.r, th.r { text-align: right; }
-
-    .condCell { display:flex; align-items:center; gap: 8px; }
-    .smallIcon { font-size: 16px; }
-
-    /* Precip bar */
-    .precipWrap{
-      display:flex;
-      align-items:center;
+      flex-wrap: wrap;
       gap: 10px;
       justify-content: flex-end;
     }
-    .bar{
-      width: 120px;
-      height: 10px;
-      border-radius: 999px;
-      border: 1px solid rgba(0,0,0,.10);
-      background: rgba(0,0,0,.04);
+
+    .sparkWrap{
+      flex: 0 0 170px;
+      display:flex;
+      flex-direction: column;
+      gap: 6px;
+      align-items: flex-start;
+    }
+    .sparkLabel{ font-size: 12px; color: var(--muted2); font-weight: 700; text-align:left; }
+    canvas{ display:block; }
+
+    .alerts{
+      display:none;
+      margin-top: 12px;
+      border-radius: 16px;
+      padding: 12px;
+      border: 1px solid rgba(0,0,0,.12);
+      background: rgba(255, 235, 59, 0.18);
+    }
+    .alerts .hdr{ font-weight: 900; display:flex; align-items:center; gap: 8px; margin-bottom: 6px; }
+    .alertItem{ margin-top: 8px; padding-top: 8px; border-top: 1px dashed rgba(0,0,0,.18); }
+    .alertName{ font-weight: 800; }
+    .alertMeta{ font-size: 12px; color: var(--muted); margin-top: 2px; }
+    .alertDesc{ font-size: 13px; margin-top: 6px; line-height: 1.35; color: rgba(0,0,0,.85); }
+
+    .sectionTitle{ font-weight: 900; margin-top: 14px; margin-bottom: 8px; font-size: 14px; text-align: right; }
+
+    table{
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      background: rgba(255,255,255,.35);
+      border: 1px solid var(--border);
+      border-radius: 14px;
       overflow: hidden;
     }
-    .fill{
-      height: 100%;
-      width: 0%;
-      border-radius: 999px;
-      background: rgba(0,0,0,.50);
+    thead th{
+      text-align:right;
+      font-weight: 800;
+      color: rgba(0,0,0,.75);
+      background: rgba(0,0,0,.03);
+      padding: 10px 10px;
+      border-bottom: 1px solid var(--border);
     }
-    .pct{ width: 38px; text-align: right; font-variant-numeric: tabular-nums; }
+    tbody td{ padding: 9px 10px; border-bottom: 1px solid rgba(0,0,0,.06); vertical-align: middle; text-align:right; }
+    tbody tr:last-child td{ border-bottom: none; }
 
-    /* Keep your theme stable: DO NOT auto-change background */
+    .r{ text-align:left; }
+    .cond{ display:flex; align-items:center; gap: 8px; white-space: nowrap; flex-direction: row-reverse; justify-content: flex-end; }
+    .cond .sIcon{ font-size: 16px; }
+
+    .footer{
+      margin-top: 10px;
+      font-size: 12px;
+      color: var(--muted);
+      display:flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: space-between;
+      flex-direction: row-reverse;
+    }
+
+    .disclaimer{ margin-top: 8px; font-size: 12px; color: var(--muted2); line-height: 1.35; text-align:right; }
   </style>
 </head>
 
 <body>
   <div class="card">
-    <div class="title">
-      <div>Campus Weather</div>
-      <div id="locPill" class="pill">—</div>
+    <div class="header">
+      <div class="titleWrap">
+        <div class="title">طقس الحرم الجامعي – جامعة درنة</div>
+        <div class="subtitle">توقعات ونمذجة (Open-Meteo) + تنبيهات رسمية (CAP)</div>
+      </div>
+      <div id="locPill" class="pill">جارٍ التحميل…</div>
     </div>
 
-    <div id="status" class="muted">Loading…</div>
+    <div id="status" class="status">جارٍ التحميل…</div>
 
-    <div class="nowWrap">
-      <div class="nowBox">
-        <div id="current"></div>
-        <div id="comfort" class="comfort" style="display:none;"></div>
-      </div>
-
-      <div class="hourlyBox">
-        <div class="boxTitle">
-          <span>Next 24 hours temperature</span>
-          <span id="hourlyRange" style="opacity:.75; font-size:12px;"></span>
-        </div>
-        <canvas id="hourlyCanvas" width="520" height="120"></canvas>
-      </div>
+    <div id="alerts" class="alerts">
+      <div class="hdr">🚨 تنبيهات ليبيا (المركز الوطني للأرصاد)</div>
+      <div id="alertsBody"></div>
     </div>
 
-    <div class="sectionTitle">7-Day Forecast</div>
+    <div id="nowBlock"></div>
+
+    <div class="sectionTitle">توقعات 7 أيام</div>
     <div id="forecast"></div>
 
-    <div id="updated" class="muted"></div>
-    <div class="muted" style="margin-top:6px;">
-      Note: Values may differ from consumer weather apps because this widget uses numerical model outputs rather than proprietary station-blended nowcasts.
+    <div class="footer">
+      <div id="updated"></div>
+      <div id="source"></div>
+    </div>
+
+    <div class="disclaimer">
+      ملاحظة: قد تختلف القيم عن تطبيقات الطقس التجارية لأن هذه الأداة تعتمد على مخرجات نماذج عددية وتنبيهات CAP الرسمية.
     </div>
   </div>
 
 <script>
 (function(){
   var WEATHER_JSON_URL = "./weather.json";
+  var ALERTS_JSON_URL = "./alerts.json";
+
+  // Optional: Arabic digits (set true for ١٢٣)
+  var USE_ARABIC_DIGITS = false;
 
   function cToF(c){ return (c * 9 / 5) + 32; }
-  function safe(v){ return (v===null || v===undefined) ? "—" : v; }
+  function safe(v){ return (v === null || v === undefined) ? "—" : v; }
+
+  function toArabicDigits(s){
+    if (!USE_ARABIC_DIGITS) return String(s);
+    var map = {"0":"٠","1":"١","2":"٢","3":"٣","4":"٤","5":"٥","6":"٦","7":"٧","8":"٨","9":"٩","-":"−",".":"٫"};
+    return String(s).replace(/[0-9\-.]/g, function(ch){ return map[ch] || ch; });
+  }
 
   function icon(code){
     if (code === 0) return "☀️";
@@ -180,194 +216,159 @@
     return "🌥️";
   }
 
-  function label(code){
-    if (code === 0) return "Clear";
-    if (code === 1 || code === 2) return "Mostly clear";
-    if (code === 3) return "Cloudy";
-    if (code >= 45 && code <= 48) return "Fog";
-    if (code >= 51 && code <= 57) return "Drizzle";
-    if (code >= 61 && code <= 67) return "Rain";
-    if (code >= 71 && code <= 77) return "Snow";
-    if (code >= 80 && code <= 82) return "Showers";
-    if (code >= 95) return "Thunderstorm";
-    return "Mixed";
+  function labelAr(code){
+    if (code === 0) return "صحو";
+    if (code === 1 || code === 2) return "غائم جزئياً";
+    if (code === 3) return "غائم";
+    if (code >= 45 && code <= 48) return "ضباب";
+    if (code >= 51 && code <= 57) return "رذاذ";
+    if (code >= 61 && code <= 67) return "أمطار";
+    if (code >= 71 && code <= 77) return "ثلوج";
+    if (code >= 80 && code <= 82) return "زخات";
+    if (code >= 95) return "عواصف رعدية";
+    return "متقلب";
   }
 
-  function comfortText(feelsF, windKmh){
-    // Simple, readable: adjust thresholds to your taste
-    if (feelsF == null) return null;
-
-    var w = (windKmh == null) ? 0 : windKmh;
-
-    if (feelsF >= 80) return "Comfort index: 🥵 Hot — stay hydrated.";
-    if (feelsF >= 65 && feelsF < 80) return "Comfort index: 🟢 Comfortable.";
-    if (feelsF >= 50 && feelsF < 65) return "Comfort index: 🧥 Cool — light jacket recommended.";
-    if (feelsF >= 35 && feelsF < 50) return "Comfort index: 🥶 Cold — dress warm.";
-    // Very cold + wind makes it harsher
-    if (feelsF < 35 && w >= 15) return "Comfort index: 🚨 Cold stress risk (windy).";
-    return "Comfort index: 🧊 Very cold — limit time outside.";
+  function isoDateLocal(){
+    var d = new Date();
+    var y = d.getFullYear();
+    var m = String(d.getMonth()+1).padStart(2,"0");
+    var day = String(d.getDate()).padStart(2,"0");
+    return y + "-" + m + "-" + day;
   }
 
-  function precipColor(p){
-    // 0–20 gray, 20–50 medium, >50 darker
-    if (p == null) return "rgba(0,0,0,.25)";
-    if (p < 20) return "rgba(0,0,0,.22)";
-    if (p < 50) return "rgba(0,0,0,.40)";
-    return "rgba(0,0,0,.60)";
-  }
-
-  function drawHourlyChart(canvas, points){
-    // points: [{time, temp_c}]
+  function drawSparkline(canvas, values){
     var ctx = canvas.getContext("2d");
     var w = canvas.width, h = canvas.height;
     ctx.clearRect(0,0,w,h);
-
-    if (!points || points.length < 2) {
-      ctx.font = "12px system-ui, Arial";
-      ctx.fillText("Hourly data unavailable", 10, 20);
-      return;
-    }
-
-    // Convert to F for display
-    var tempsF = points.map(function(p){
-      return (p.temp_c==null) ? null : cToF(p.temp_c);
-    });
+    if (!values || values.length < 2) return;
 
     var min = Infinity, max = -Infinity;
-    tempsF.forEach(function(v){
+    values.forEach(function(v){
       if (v == null) return;
       min = Math.min(min, v);
       max = Math.max(max, v);
     });
-    if (!isFinite(min) || !isFinite(max)) return;
     if (min === max) { min -= 1; max += 1; }
 
-    var padL = 28, padR = 10, padT = 12, padB = 20;
-    function x(i){ return padL + (i/(tempsF.length-1)) * (w - padL - padR); }
-    function y(v){ return padT + (1 - (v-min)/(max-min)) * (h - padT - padB); }
+    function x(i){ return (i/(values.length-1)) * (w-10) + 5; }
+    function y(v){ return (h-8) - ((v-min)/(max-min))*(h-16) + 4; }
 
-    // Baseline grid
-    ctx.strokeStyle = "rgba(0,0,0,.10)";
-    ctx.lineWidth = 1;
     ctx.beginPath();
-    ctx.moveTo(padL, h-padB);
-    ctx.lineTo(w-padR, h-padB);
-    ctx.stroke();
-
-    // Line
-    ctx.strokeStyle = "#111";
-    ctx.lineWidth = 2;
-    ctx.beginPath();
-    tempsF.forEach(function(v,i){
+    values.forEach(function(v,i){
       if (v == null) return;
       var px = x(i), py = y(v);
       if (i === 0) ctx.moveTo(px, py);
       else ctx.lineTo(px, py);
     });
+    ctx.strokeStyle = "#111";
+    ctx.lineWidth = 2;
     ctx.stroke();
 
-    // Points (more visible)
-    tempsF.forEach(function(v,i){
+    values.forEach(function(v,i){
       if (v == null) return;
       ctx.beginPath();
-      ctx.arc(x(i), y(v), 4, 0, Math.PI*2);
+      ctx.arc(x(i), y(v), 3.5, 0, Math.PI*2);
       ctx.fillStyle = "#111";
       ctx.fill();
     });
-
-    // Min/Max labels
-    ctx.fillStyle = "rgba(0,0,0,.70)";
-    ctx.font = "12px system-ui, Arial";
-    ctx.fillText(Math.round(max) + "°F", 6, padT+10);
-    ctx.fillText(Math.round(min) + "°F", 6, h-padB);
-
-    // X labels: show every 6 hours
-    ctx.fillStyle = "rgba(0,0,0,.55)";
-    ctx.font = "11px system-ui, Arial";
-    for (var i=0; i<tempsF.length; i+=6){
-      var t = points[i].time || "";
-      var hh = t.split("T")[1] || "";
-      hh = hh.slice(0,5);
-      ctx.fillText(hh, x(i)-10, h-6);
-    }
   }
 
-  fetch(WEATHER_JSON_URL, {cache:"no-store"})
-    .then(function(r){ if(!r.ok) throw new Error("HTTP "+r.status); return r.json(); })
+  // 1) Weather
+  fetch(WEATHER_JSON_URL, { cache: "no-store" })
+    .then(function(r){ if(!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
     .then(function(data){
       document.getElementById("status").textContent = "";
 
       var cur = data.current || {};
-      var meta = data.meta || {};
       var daily = data.daily || [];
-      var hourly = (data.hourly && data.hourly.next24) ? data.hourly.next24 : [];
+      var meta = data.meta || {};
 
-      // Location pill
-      document.getElementById("locPill").textContent = meta.place_name || "—";
+      document.getElementById("locPill").textContent = meta.place_name || "الموقع";
 
-      // Current
       var tC = cur.temperature_c;
-      var tF = (tC==null) ? null : cToF(tC);
       var feelsC = cur.feels_like_c;
-      var feelsF = (feelsC==null) ? null : cToF(feelsC);
 
-      document.getElementById("current").innerHTML =
-        "<div class='nowLine'><span class='icon'>" + icon(cur.weather_code) + "</span>" +
-        "<strong>Now:</strong> " + safe(tF==null?null:tF.toFixed(1)) + "°F" +
-        " (" + safe(tC==null?null:tC.toFixed(1)) + "°C)" +
-        " • " + label(cur.weather_code) + "</div>" +
-        "<div class='subLine'>Humidity: " + safe(cur.humidity_pct) + "% • " +
-        "Wind: " + safe(cur.wind_speed_kmh) + " km/h" +
-        " • Feels like: " + safe(feelsF==null?null:feelsF.toFixed(1)) + "°F</div>";
-
-      // Comfort index
-      var cText = comfortText(feelsF, cur.wind_speed_kmh);
-      if (cText){
-        var cEl = document.getElementById("comfort");
-        cEl.textContent = cText;
-        cEl.style.display = "block";
-      }
-
-      // Hourly chart
-      var canvas = document.getElementById("hourlyCanvas");
-      drawHourlyChart(canvas, hourly);
-
-      if (hourly && hourly.length){
-        var start = (hourly[0].time || "").replace("T"," ").slice(0,16);
-        var end = (hourly[hourly.length-1].time || "").replace("T"," ").slice(0,16);
-        document.getElementById("hourlyRange").textContent = start + " → " + end;
-      }
-
-      // Forecast with precip bars
-      var rows = daily.slice(0,7).map(function(d){
-        var maxF = (d.tmax_c==null)?null:cToF(d.tmax_c);
-        var minF = (d.tmin_c==null)?null:cToF(d.tmin_c);
-        var p = d.precip_prob_pct;
-        var w = (p==null) ? 0 : Math.max(0, Math.min(100, p));
-
-        return "<tr>" +
-          "<td>"+safe(d.date)+"</td>" +
-          "<td><div class='condCell'><span class='smallIcon'>"+icon(d.weather_code)+"</span><span>"+label(d.weather_code)+"</span></div></td>" +
-          "<td class='r'>"+safe(maxF==null?null:maxF.toFixed(0))+" / "+safe(minF==null?null:minF.toFixed(0))+"°F</td>" +
-          "<td class='r'>" +
-            "<div class='precipWrap'>" +
-              "<div class='bar'><div class='fill' style='width:"+w+"%; background:"+precipColor(p)+";'></div></div>" +
-              "<div class='pct'>"+safe(p)+"%</div>" +
+      var nowHtml =
+        "<div class='nowRow'>" +
+          "<div class='bigIcon' aria-hidden='true'>" + icon(cur.weather_code) + "</div>" +
+          "<div class='nowMain'>" +
+            "<div class='nowLine'>الآن: " +
+              toArabicDigits(safe(tC==null?null:tC.toFixed(1))) + "°م" +
+              " • " + labelAr(cur.weather_code) +
             "</div>" +
-          "</td>" +
+            "<div class='nowMeta'>" +
+              "<span>الرطوبة: <strong>" + toArabicDigits(safe(cur.humidity_pct)) + "%</strong></span>" +
+              "<span>الرياح: <strong>" + toArabicDigits(safe(cur.wind_speed_kmh)) + " كم/س</strong></span>" +
+              "<span>المحسوس: <strong>" + toArabicDigits(safe(feelsC==null?null:feelsC.toFixed(1))) + "°م</strong></span>" +
+            "</div>" +
+          "</div>" +
+          "<div class='sparkWrap'>" +
+            "<div class='sparkLabel'>العظمى خلال 7 أيام (°م)</div>" +
+            "<canvas id='spark' width='170' height='42'></canvas>" +
+          "</div>" +
+        "</div>";
+
+      document.getElementById("nowBlock").innerHTML = nowHtml;
+
+      var today = isoDateLocal();
+
+      var rows = daily.slice(0,7).map(function(d){
+        var isToday = (d.date === today);
+        return "<tr class='" + (isToday ? "today" : "") + "'>" +
+          "<td>" + toArabicDigits(safe(d.date)) + "</td>" +
+          "<td><div class='cond'><span class='sIcon'>" + icon(d.weather_code) + "</span><span>" + labelAr(d.weather_code) + "</span></div></td>" +
+          "<td class='r'>" + toArabicDigits(safe(d.tmax_c==null?null:d.tmax_c.toFixed(0))) + " / " + toArabicDigits(safe(d.tmin_c==null?null:d.tmin_c.toFixed(0))) + "°م</td>" +
+          "<td class='r'>" + toArabicDigits(safe(d.precip_prob_pct)) + "%</td>" +
         "</tr>";
       }).join("");
 
       document.getElementById("forecast").innerHTML =
         "<table><thead><tr>" +
-          "<th>Date</th><th>Condition</th><th class='r'>High / Low</th><th class='r'>Precip</th>" +
-        "</tr></thead><tbody>"+rows+"</tbody></table>";
+          "<th>التاريخ</th><th>الحالة</th><th class='r'>عظمى / صغرى</th><th class='r'>احتمال المطر</th>" +
+        "</tr></thead><tbody>" + rows + "</tbody></table>";
 
-      document.getElementById("updated").textContent =
-        "Updated (UTC): " + safe(meta.generated_utc) + " • Source: " + safe(meta.source);
+      var highsC = daily.slice(0,7).map(function(d){ return d.tmax_c; });
+      var canvas = document.getElementById("spark");
+      if (canvas) drawSparkline(canvas, highsC);
+
+      document.getElementById("updated").textContent = "آخر تحديث (UTC): " + toArabicDigits(safe(meta.generated_utc));
+      document.getElementById("source").textContent = "المصدر: " + safe(meta.source);
+
+      // 2) Alerts (from alerts.json generated by Actions)
+      return fetch(ALERTS_JSON_URL, { cache: "no-store" });
+    })
+    .then(function(r){
+      if (!r || !r.ok) throw new Error("Alerts unavailable");
+      return r.json();
+    })
+    .then(function(alertsData){
+      var alerts = (alertsData && alertsData.alerts) ? alertsData.alerts : [];
+      if (!alerts.length) return;
+
+      var html = alerts.slice(0,3).map(function(a){
+        var title = a.title || "تنبيه";
+        var pub = a.published || "";
+        var sum = a.summary || "";
+
+        // Keep it short
+        if (sum.length > 320) sum = sum.slice(0,319) + "…";
+
+        return "<div class='alertItem'>" +
+          "<div class='alertName'>⚠️ " + title + "</div>" +
+          (pub ? "<div class='alertMeta'>التاريخ: " + pub + "</div>" : "") +
+          (sum ? "<div class='alertDesc'>" + sum.replace(/\n/g,"<br>") + "</div>" : "") +
+        "</div>";
+      }).join("");
+
+      document.getElementById("alertsBody").innerHTML = html;
+      document.getElementById("alerts").style.display = "block";
     })
     .catch(function(e){
-      document.getElementById("status").textContent = "Weather unavailable ("+e.message+").";
+      // If weather fails, show error; if alerts fail, ignore.
+      var s = document.getElementById("status");
+      if (s && s.textContent === "") return; // weather OK, alerts failed
+      document.getElementById("status").textContent = "تعذر عرض الطقس (" + (e && e.message ? e.message : "خطأ") + ").";
     });
 })();
 </script>
