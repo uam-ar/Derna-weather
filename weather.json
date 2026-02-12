@@ -5,64 +5,64 @@
     "lon": 22.6367,
     "timezone": "Africa/Tripoli",
     "source": "open-meteo",
-    "generated_utc": "2026-02-12T14:33:41.366569+00:00"
+    "generated_utc": "2026-02-12T18:10:13.118114+00:00"
   },
   "current": {
-    "temperature_c": 22.9,
-    "feels_like_c": 19.5,
-    "humidity_pct": 47,
-    "wind_speed_kmh": 25.4,
+    "temperature_c": 20.7,
+    "feels_like_c": 17.5,
+    "humidity_pct": 56,
+    "wind_speed_kmh": 25.8,
     "weather_code": 3
   },
   "daily": [
     {
       "date": "2026-02-12",
-      "tmax_c": 23.0,
+      "tmax_c": 23.6,
       "tmin_c": 16.2,
-      "weather_code": 3,
-      "precip_prob_pct": 88
+      "weather_code": 80,
+      "precip_prob_pct": 85
     },
     {
       "date": "2026-02-13",
-      "tmax_c": 20.3,
-      "tmin_c": 15.0,
-      "weather_code": 61,
-      "precip_prob_pct": 88
+      "tmax_c": 20.4,
+      "tmin_c": 14.9,
+      "weather_code": 95,
+      "precip_prob_pct": 100
     },
     {
       "date": "2026-02-14",
-      "tmax_c": 23.6,
-      "tmin_c": 12.6,
+      "tmax_c": 23.2,
+      "tmin_c": 12.5,
       "weather_code": 1,
       "precip_prob_pct": 0
     },
     {
       "date": "2026-02-15",
-      "tmax_c": 23.0,
-      "tmin_c": 16.0,
+      "tmax_c": 23.6,
+      "tmin_c": 16.3,
       "weather_code": 2,
       "precip_prob_pct": 0
     },
     {
       "date": "2026-02-16",
-      "tmax_c": 19.4,
-      "tmin_c": 12.5,
-      "weather_code": 80,
-      "precip_prob_pct": 3
+      "tmax_c": 20.2,
+      "tmin_c": 12.1,
+      "weather_code": 2,
+      "precip_prob_pct": 5
     },
     {
       "date": "2026-02-17",
-      "tmax_c": 20.6,
-      "tmin_c": 13.4,
+      "tmax_c": 20.3,
+      "tmin_c": 13.3,
       "weather_code": 3,
-      "precip_prob_pct": 20
+      "precip_prob_pct": 3
     },
     {
       "date": "2026-02-18",
-      "tmax_c": 17.2,
-      "tmin_c": 12.8,
-      "weather_code": 3,
-      "precip_prob_pct": 19
+      "tmax_c": 16.3,
+      "tmin_c": 12.5,
+      "weather_code": 2,
+      "precip_prob_pct": 3
     }
   ]
 }
