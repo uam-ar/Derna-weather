@@ -5,63 +5,63 @@
     "lon": 22.6367,
     "timezone": "Africa/Tripoli",
     "source": "open-meteo",
-    "generated_utc": "2026-02-13T23:46:06.229266+00:00"
+    "generated_utc": "2026-02-14T05:01:27.820721+00:00"
   },
   "current": {
-    "temperature_c": 14.8,
-    "feels_like_c": 13.4,
-    "humidity_pct": 70,
-    "wind_speed_kmh": 8.8,
-    "weather_code": 2
+    "temperature_c": 12.6,
+    "feels_like_c": 11.2,
+    "humidity_pct": 76,
+    "wind_speed_kmh": 7.3,
+    "weather_code": 0
   },
   "daily": [
     {
       "date": "2026-02-14",
-      "tmax_c": 22.7,
+      "tmax_c": 22.0,
       "tmin_c": 12.6,
-      "weather_code": 2,
-      "precip_prob_pct": 0
-    },
-    {
-      "date": "2026-02-15",
-      "tmax_c": 22.9,
-      "tmin_c": 14.9,
       "weather_code": 1,
       "precip_prob_pct": 0
     },
     {
-      "date": "2026-02-16",
-      "tmax_c": 19.9,
-      "tmin_c": 12.4,
-      "weather_code": 3,
+      "date": "2026-02-15",
+      "tmax_c": 22.1,
+      "tmin_c": 15.4,
+      "weather_code": 1,
       "precip_prob_pct": 3
     },
     {
+      "date": "2026-02-16",
+      "tmax_c": 19.5,
+      "tmin_c": 12.8,
+      "weather_code": 3,
+      "precip_prob_pct": 13
+    },
+    {
       "date": "2026-02-17",
-      "tmax_c": 20.5,
+      "tmax_c": 20.7,
       "tmin_c": 13.2,
       "weather_code": 3,
-      "precip_prob_pct": 10
+      "precip_prob_pct": 8
     },
     {
       "date": "2026-02-18",
-      "tmax_c": 17.2,
-      "tmin_c": 12.9,
+      "tmax_c": 17.8,
+      "tmin_c": 12.4,
       "weather_code": 2,
-      "precip_prob_pct": 6
+      "precip_prob_pct": 5
     },
     {
       "date": "2026-02-19",
-      "tmax_c": 16.6,
-      "tmin_c": 10.2,
-      "weather_code": 2,
+      "tmax_c": 18.7,
+      "tmin_c": 8.6,
+      "weather_code": 3,
       "precip_prob_pct": 0
     },
     {
       "date": "2026-02-20",
-      "tmax_c": 20.9,
-      "tmin_c": 10.3,
-      "weather_code": 3,
+      "tmax_c": 20.7,
+      "tmin_c": 12.6,
+      "weather_code": 1,
       "precip_prob_pct": 2
     }
   ]
