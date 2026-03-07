@@ -5,64 +5,64 @@
     "lon": 22.6367,
     "timezone": "Africa/Tripoli",
     "source": "open-meteo",
-    "generated_utc": "2026-03-07T02:43:00.899942+00:00"
+    "generated_utc": "2026-03-07T04:38:59.615198+00:00"
   },
   "current": {
-    "temperature_c": 11.8,
-    "feels_like_c": 10.8,
-    "humidity_pct": 91,
-    "wind_speed_kmh": 7.8,
-    "weather_code": 2
+    "temperature_c": 11.1,
+    "feels_like_c": 9.6,
+    "humidity_pct": 88,
+    "wind_speed_kmh": 8.6,
+    "weather_code": 0
   },
   "daily": [
     {
       "date": "2026-03-07",
-      "tmax_c": 18.1,
-      "tmin_c": 11.1,
+      "tmax_c": 18.4,
+      "tmin_c": 10.9,
       "weather_code": 2,
       "precip_prob_pct": 0
     },
     {
       "date": "2026-03-08",
-      "tmax_c": 18.5,
-      "tmin_c": 10.8,
+      "tmax_c": 18.7,
+      "tmin_c": 11.3,
       "weather_code": 3,
-      "precip_prob_pct": 0
+      "precip_prob_pct": 3
     },
     {
       "date": "2026-03-09",
-      "tmax_c": 18.2,
-      "tmin_c": 11.4,
+      "tmax_c": 18.3,
+      "tmin_c": 11.7,
       "weather_code": 3,
       "precip_prob_pct": 3
     },
     {
       "date": "2026-03-10",
-      "tmax_c": 18.0,
-      "tmin_c": 13.4,
-      "weather_code": 80,
-      "precip_prob_pct": 28
+      "tmax_c": 18.1,
+      "tmin_c": 14.4,
+      "weather_code": 3,
+      "precip_prob_pct": 23
     },
     {
       "date": "2026-03-11",
-      "tmax_c": 16.9,
-      "tmin_c": 12.7,
+      "tmax_c": 16.2,
+      "tmin_c": 12.6,
       "weather_code": 80,
-      "precip_prob_pct": 26
+      "precip_prob_pct": 33
     },
     {
       "date": "2026-03-12",
-      "tmax_c": 17.3,
-      "tmin_c": 10.4,
-      "weather_code": 45,
-      "precip_prob_pct": 9
+      "tmax_c": 18.2,
+      "tmin_c": 10.2,
+      "weather_code": 3,
+      "precip_prob_pct": 2
     },
     {
       "date": "2026-03-13",
-      "tmax_c": 17.6,
-      "tmin_c": 11.3,
+      "tmax_c": 17.9,
+      "tmin_c": 11.7,
       "weather_code": 3,
-      "precip_prob_pct": 15
+      "precip_prob_pct": 10
     }
   ]
 }
