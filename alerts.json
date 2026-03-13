@@ -2,7 +2,7 @@
   "meta": {
     "source": "WMO CAP (Libyan National Meteorological Centre)",
     "feed": "https://cap-sources.s3.amazonaws.com/ly-nmc-ar/rss.xml",
-    "generated_utc": "2026-03-13T22:43:06.503640+00:00"
+    "generated_utc": "2026-03-13T23:41:12.877743+00:00"
   },
   "alerts": [
     {
