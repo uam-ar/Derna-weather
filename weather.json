@@ -5,64 +5,64 @@
     "lon": 22.6367,
     "timezone": "Africa/Tripoli",
     "source": "open-meteo",
-    "generated_utc": "2026-04-05T03:35:14.937737+00:00"
+    "generated_utc": "2026-04-05T05:51:33.273999+00:00"
   },
   "current": {
-    "temperature_c": 11.0,
-    "feels_like_c": 9.6,
-    "humidity_pct": 88,
-    "wind_speed_kmh": 8.4,
+    "temperature_c": 13.4,
+    "feels_like_c": 12.6,
+    "humidity_pct": 81,
+    "wind_speed_kmh": 5.4,
     "weather_code": 1
   },
   "daily": [
     {
       "date": "2026-04-05",
-      "tmax_c": 17.6,
-      "tmin_c": 10.9,
-      "weather_code": 3,
-      "precip_prob_pct": 43
+      "tmax_c": 17.8,
+      "tmin_c": 11.1,
+      "weather_code": 2,
+      "precip_prob_pct": 25
     },
     {
       "date": "2026-04-06",
-      "tmax_c": 17.5,
-      "tmin_c": 14.3,
+      "tmax_c": 17.6,
+      "tmin_c": 14.2,
       "weather_code": 95,
-      "precip_prob_pct": 15
+      "precip_prob_pct": 5
     },
     {
       "date": "2026-04-07",
-      "tmax_c": 19.8,
-      "tmin_c": 14.3,
+      "tmax_c": 19.3,
+      "tmin_c": 14.5,
       "weather_code": 2,
       "precip_prob_pct": 0
     },
     {
       "date": "2026-04-08",
-      "tmax_c": 21.1,
-      "tmin_c": 12.5,
+      "tmax_c": 20.5,
+      "tmin_c": 11.6,
       "weather_code": 0,
       "precip_prob_pct": 0
     },
     {
       "date": "2026-04-09",
-      "tmax_c": 21.2,
-      "tmin_c": 15.7,
+      "tmax_c": 21.5,
+      "tmin_c": 14.3,
       "weather_code": 0,
-      "precip_prob_pct": 1
+      "precip_prob_pct": 0
     },
     {
       "date": "2026-04-10",
-      "tmax_c": 20.4,
-      "tmin_c": 13.1,
-      "weather_code": 2,
+      "tmax_c": 20.3,
+      "tmin_c": 13.7,
+      "weather_code": 1,
       "precip_prob_pct": 5
     },
     {
       "date": "2026-04-11",
-      "tmax_c": 24.0,
-      "tmin_c": 10.9,
-      "weather_code": 2,
-      "precip_prob_pct": 4
+      "tmax_c": 20.6,
+      "tmin_c": 12.0,
+      "weather_code": 3,
+      "precip_prob_pct": 3
     }
   ]
 }
