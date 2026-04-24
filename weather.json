@@ -5,62 +5,62 @@
     "lon": 22.6367,
     "timezone": "Africa/Tripoli",
     "source": "open-meteo",
-    "generated_utc": "2026-04-24T21:59:47.243091+00:00"
+    "generated_utc": "2026-04-24T22:56:13.482670+00:00"
   },
   "current": {
-    "temperature_c": 14.8,
-    "feels_like_c": 11.8,
-    "humidity_pct": 90,
-    "wind_speed_kmh": 27.7,
-    "weather_code": 3
+    "temperature_c": 14.7,
+    "feels_like_c": 12.1,
+    "humidity_pct": 91,
+    "wind_speed_kmh": 24.6,
+    "weather_code": 80
   },
   "daily": [
     {
-      "date": "2026-04-24",
-      "tmax_c": 20.2,
-      "tmin_c": 14.8,
-      "weather_code": 95,
-      "precip_prob_pct": 100
-    },
-    {
       "date": "2026-04-25",
-      "tmax_c": 19.3,
-      "tmin_c": 14.4,
-      "weather_code": 80,
+      "tmax_c": 18.8,
+      "tmin_c": 14.3,
+      "weather_code": 95,
       "precip_prob_pct": 33
     },
     {
       "date": "2026-04-26",
-      "tmax_c": 20.8,
-      "tmin_c": 16.0,
-      "weather_code": 2,
-      "precip_prob_pct": 0
-    },
-    {
-      "date": "2026-04-27",
-      "tmax_c": 21.0,
-      "tmin_c": 16.6,
+      "tmax_c": 20.6,
+      "tmin_c": 16.4,
       "weather_code": 3,
       "precip_prob_pct": 0
     },
     {
+      "date": "2026-04-27",
+      "tmax_c": 21.3,
+      "tmin_c": 16.7,
+      "weather_code": 1,
+      "precip_prob_pct": 0
+    },
+    {
       "date": "2026-04-28",
-      "tmax_c": 20.8,
-      "tmin_c": 15.6,
+      "tmax_c": 20.7,
+      "tmin_c": 14.8,
       "weather_code": 1,
       "precip_prob_pct": 0
     },
     {
       "date": "2026-04-29",
-      "tmax_c": 26.8,
-      "tmin_c": 14.7,
-      "weather_code": 2,
+      "tmax_c": 26.7,
+      "tmin_c": 13.7,
+      "weather_code": 3,
       "precip_prob_pct": 3
     },
     {
       "date": "2026-04-30",
       "tmax_c": 32.6,
       "tmin_c": 20.1,
+      "weather_code": 3,
+      "precip_prob_pct": 0
+    },
+    {
+      "date": "2026-05-01",
+      "tmax_c": 28.3,
+      "tmin_c": 19.6,
       "weather_code": 3,
       "precip_prob_pct": 0
     }
