@@ -5,27 +5,27 @@
     "lon": 22.6367,
     "timezone": "Africa/Tripoli",
     "source": "open-meteo",
-    "generated_utc": "2026-07-10T04:10:25.794689+00:00"
+    "generated_utc": "2026-07-10T07:49:25.718124+00:00"
   },
   "current": {
-    "temperature_c": 23.3,
-    "feels_like_c": 26.3,
-    "humidity_pct": 80,
-    "wind_speed_kmh": 5.2,
-    "weather_code": 1
+    "temperature_c": 27.1,
+    "feels_like_c": 29.9,
+    "humidity_pct": 65,
+    "wind_speed_kmh": 11.8,
+    "weather_code": 2
   },
   "daily": [
     {
       "date": "2026-07-10",
-      "tmax_c": 28.7,
-      "tmin_c": 23.3,
+      "tmax_c": 28.6,
+      "tmin_c": 23.6,
       "weather_code": 2,
       "precip_prob_pct": 0
     },
     {
       "date": "2026-07-11",
       "tmax_c": 28.9,
-      "tmin_c": 24.2,
+      "tmin_c": 24.3,
       "weather_code": 2,
       "precip_prob_pct": 0
     },
