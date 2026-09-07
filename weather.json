@@ -5,64 +5,64 @@
     "lon": 22.6367,
     "timezone": "Africa/Tripoli",
     "source": "open-meteo",
-    "generated_utc": "2026-09-06T23:50:24.282534+00:00"
+    "generated_utc": "2026-09-07T04:31:54.374563+00:00"
   },
   "current": {
-    "temperature_c": 26.4,
-    "feels_like_c": 29.1,
-    "humidity_pct": 78,
-    "wind_speed_kmh": 16.1,
+    "temperature_c": 25.9,
+    "feels_like_c": 28.1,
+    "humidity_pct": 80,
+    "wind_speed_kmh": 19.6,
     "weather_code": 1
   },
   "daily": [
     {
       "date": "2026-09-07",
-      "tmax_c": 30.9,
-      "tmin_c": 26.3,
+      "tmax_c": 30.5,
+      "tmin_c": 25.9,
       "weather_code": 2,
       "precip_prob_pct": 0
     },
     {
       "date": "2026-09-08",
-      "tmax_c": 30.6,
-      "tmin_c": 24.9,
+      "tmax_c": 30.4,
+      "tmin_c": 25.1,
       "weather_code": 0,
       "precip_prob_pct": 0
     },
     {
       "date": "2026-09-09",
-      "tmax_c": 30.1,
-      "tmin_c": 26.0,
-      "weather_code": 2,
-      "precip_prob_pct": 0
-    },
-    {
-      "date": "2026-09-10",
-      "tmax_c": 30.2,
-      "tmin_c": 26.3,
-      "weather_code": 2,
-      "precip_prob_pct": 0
-    },
-    {
-      "date": "2026-09-11",
-      "tmax_c": 30.2,
+      "tmax_c": 29.5,
       "tmin_c": 25.8,
       "weather_code": 2,
       "precip_prob_pct": 0
     },
     {
-      "date": "2026-09-12",
+      "date": "2026-09-10",
       "tmax_c": 29.8,
-      "tmin_c": 25.5,
+      "tmin_c": 25.8,
+      "weather_code": 2,
+      "precip_prob_pct": 0
+    },
+    {
+      "date": "2026-09-11",
+      "tmax_c": 29.6,
+      "tmin_c": 25.6,
+      "weather_code": 2,
+      "precip_prob_pct": 0
+    },
+    {
+      "date": "2026-09-12",
+      "tmax_c": 30.1,
+      "tmin_c": 25.7,
       "weather_code": 2,
       "precip_prob_pct": 0
     },
     {
       "date": "2026-09-13",
-      "tmax_c": 30.5,
-      "tmin_c": 23.8,
-      "weather_code": 1,
-      "precip_prob_pct": 3
+      "tmax_c": 30.4,
+      "tmin_c": 23.0,
+      "weather_code": 0,
+      "precip_prob_pct": 0
     }
   ]
 }
