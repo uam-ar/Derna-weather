@@ -5,55 +5,48 @@
     "lon": 22.6367,
     "timezone": "Africa/Tripoli",
     "source": "open-meteo",
-    "generated_utc": "2026-09-25T18:32:46.062134+00:00"
+    "generated_utc": "2026-09-25T22:16:01.768513+00:00"
   },
   "current": {
-    "temperature_c": 22.7,
-    "feels_like_c": 24.7,
-    "humidity_pct": 73,
-    "wind_speed_kmh": 4.7,
-    "weather_code": 3
+    "temperature_c": 21.5,
+    "feels_like_c": 23.9,
+    "humidity_pct": 85,
+    "wind_speed_kmh": 6.1,
+    "weather_code": 2
   },
   "daily": [
     {
-      "date": "2026-09-25",
-      "tmax_c": 25.8,
-      "tmin_c": 20.6,
-      "weather_code": 3,
-      "precip_prob_pct": 5
-    },
-    {
       "date": "2026-09-26",
-      "tmax_c": 26.3,
-      "tmin_c": 20.8,
-      "weather_code": 80,
-      "precip_prob_pct": 55
+      "tmax_c": 25.9,
+      "tmin_c": 20.6,
+      "weather_code": 61,
+      "precip_prob_pct": 65
     },
     {
       "date": "2026-09-27",
-      "tmax_c": 24.5,
-      "tmin_c": 19.4,
-      "weather_code": 2,
-      "precip_prob_pct": 10
+      "tmax_c": 23.2,
+      "tmin_c": 19.5,
+      "weather_code": 80,
+      "precip_prob_pct": 28
     },
     {
       "date": "2026-09-28",
-      "tmax_c": 25.1,
-      "tmin_c": 21.7,
-      "weather_code": 2,
-      "precip_prob_pct": 5
+      "tmax_c": 25.0,
+      "tmin_c": 21.9,
+      "weather_code": 3,
+      "precip_prob_pct": 3
     },
     {
       "date": "2026-09-29",
-      "tmax_c": 24.9,
-      "tmin_c": 22.0,
-      "weather_code": 2,
+      "tmax_c": 24.6,
+      "tmin_c": 22.1,
+      "weather_code": 3,
       "precip_prob_pct": 0
     },
     {
       "date": "2026-09-30",
-      "tmax_c": 22.8,
-      "tmin_c": 21.3,
+      "tmax_c": 23.2,
+      "tmin_c": 21.1,
       "weather_code": 2,
       "precip_prob_pct": 8
     },
@@ -63,6 +56,13 @@
       "tmin_c": 21.3,
       "weather_code": 3,
       "precip_prob_pct": 12
+    },
+    {
+      "date": "2026-10-02",
+      "tmax_c": 27.2,
+      "tmin_c": 20.3,
+      "weather_code": 2,
+      "precip_prob_pct": 23
     }
   ]
 }
