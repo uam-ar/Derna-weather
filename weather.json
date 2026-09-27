@@ -5,64 +5,64 @@
     "lon": 22.6367,
     "timezone": "Africa/Tripoli",
     "source": "open-meteo",
-    "generated_utc": "2026-09-27T13:54:27.192618+00:00"
+    "generated_utc": "2026-09-27T18:19:51.553729+00:00"
   },
   "current": {
-    "temperature_c": 23.3,
-    "feels_like_c": 22.0,
-    "humidity_pct": 67,
-    "wind_speed_kmh": 25.3,
-    "weather_code": 1
+    "temperature_c": 21.3,
+    "feels_like_c": 20.8,
+    "humidity_pct": 77,
+    "wind_speed_kmh": 20.2,
+    "weather_code": 2
   },
   "daily": [
     {
       "date": "2026-09-27",
-      "tmax_c": 23.7,
+      "tmax_c": 23.6,
       "tmin_c": 19.6,
       "weather_code": 2,
       "precip_prob_pct": 10
     },
     {
       "date": "2026-09-28",
-      "tmax_c": 24.8,
-      "tmin_c": 21.4,
+      "tmax_c": 24.6,
+      "tmin_c": 21.1,
       "weather_code": 3,
       "precip_prob_pct": 13
     },
     {
       "date": "2026-09-29",
-      "tmax_c": 24.5,
-      "tmin_c": 21.9,
+      "tmax_c": 24.9,
+      "tmin_c": 21.6,
       "weather_code": 3,
       "precip_prob_pct": 0
     },
     {
       "date": "2026-09-30",
-      "tmax_c": 22.9,
-      "tmin_c": 20.9,
-      "weather_code": 3,
-      "precip_prob_pct": 9
+      "tmax_c": 23.8,
+      "tmin_c": 21.2,
+      "weather_code": 2,
+      "precip_prob_pct": 10
     },
     {
       "date": "2026-10-01",
-      "tmax_c": 20.9,
-      "tmin_c": 19.5,
-      "weather_code": 95,
-      "precip_prob_pct": 46
+      "tmax_c": 21.4,
+      "tmin_c": 19.6,
+      "weather_code": 80,
+      "precip_prob_pct": 28
     },
     {
       "date": "2026-10-02",
-      "tmax_c": 23.0,
-      "tmin_c": 19.4,
-      "weather_code": 80,
-      "precip_prob_pct": 55
+      "tmax_c": 23.5,
+      "tmin_c": 20.0,
+      "weather_code": 2,
+      "precip_prob_pct": 33
     },
     {
       "date": "2026-10-03",
-      "tmax_c": 23.5,
-      "tmin_c": 20.4,
-      "weather_code": 2,
-      "precip_prob_pct": 30
+      "tmax_c": 25.0,
+      "tmin_c": 18.5,
+      "weather_code": 3,
+      "precip_prob_pct": 40
     }
   ]
 }
