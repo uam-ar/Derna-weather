@@ -5,64 +5,64 @@
     "lon": 22.6367,
     "timezone": "Africa/Tripoli",
     "source": "open-meteo",
-    "generated_utc": "2026-09-28T00:41:10.381234+00:00"
+    "generated_utc": "2026-09-28T06:48:13.280405+00:00"
   },
   "current": {
-    "temperature_c": 22.0,
-    "feels_like_c": 22.0,
-    "humidity_pct": 79,
-    "wind_speed_kmh": 20.7,
+    "temperature_c": 23.2,
+    "feels_like_c": 22.9,
+    "humidity_pct": 70,
+    "wind_speed_kmh": 19.7,
     "weather_code": 2
   },
   "daily": [
     {
       "date": "2026-09-28",
-      "tmax_c": 24.7,
+      "tmax_c": 24.9,
       "tmin_c": 20.8,
       "weather_code": 80,
-      "precip_prob_pct": 15
+      "precip_prob_pct": 38
     },
     {
       "date": "2026-09-29",
-      "tmax_c": 24.8,
-      "tmin_c": 21.9,
+      "tmax_c": 25.1,
+      "tmin_c": 21.7,
       "weather_code": 3,
-      "precip_prob_pct": 3
+      "precip_prob_pct": 0
     },
     {
       "date": "2026-09-30",
-      "tmax_c": 22.5,
+      "tmax_c": 24.2,
       "tmin_c": 20.7,
-      "weather_code": 2,
-      "precip_prob_pct": 13
+      "weather_code": 80,
+      "precip_prob_pct": 18
     },
     {
       "date": "2026-10-01",
-      "tmax_c": 20.7,
-      "tmin_c": 19.2,
-      "weather_code": 95,
-      "precip_prob_pct": 40
+      "tmax_c": 21.1,
+      "tmin_c": 19.9,
+      "weather_code": 80,
+      "precip_prob_pct": 43
     },
     {
       "date": "2026-10-02",
-      "tmax_c": 22.9,
-      "tmin_c": 19.1,
+      "tmax_c": 20.5,
+      "tmin_c": 19.5,
       "weather_code": 95,
-      "precip_prob_pct": 29
+      "precip_prob_pct": 28
     },
     {
       "date": "2026-10-03",
-      "tmax_c": 25.0,
-      "tmin_c": 18.5,
-      "weather_code": 3,
-      "precip_prob_pct": 40
+      "tmax_c": 22.5,
+      "tmin_c": 19.7,
+      "weather_code": 80,
+      "precip_prob_pct": 30
     },
     {
       "date": "2026-10-04",
-      "tmax_c": 23.9,
-      "tmin_c": 20.2,
-      "weather_code": 3,
-      "precip_prob_pct": 25
+      "tmax_c": 24.6,
+      "tmin_c": 20.5,
+      "weather_code": 2,
+      "precip_prob_pct": 17
     }
   ]
 }
