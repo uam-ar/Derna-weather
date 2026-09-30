@@ -5,64 +5,64 @@
     "lon": 22.6367,
     "timezone": "Africa/Tripoli",
     "source": "open-meteo",
-    "generated_utc": "2026-09-30T13:38:14.015304+00:00"
+    "generated_utc": "2026-09-30T19:14:43.919331+00:00"
   },
   "current": {
-    "temperature_c": 23.8,
-    "feels_like_c": 22.8,
-    "humidity_pct": 60,
-    "wind_speed_kmh": 19.9,
-    "weather_code": 1
+    "temperature_c": 21.7,
+    "feels_like_c": 21.0,
+    "humidity_pct": 70,
+    "wind_speed_kmh": 18.5,
+    "weather_code": 2
   },
   "daily": [
     {
       "date": "2026-09-30",
-      "tmax_c": 23.9,
-      "tmin_c": 20.8,
+      "tmax_c": 24.2,
+      "tmin_c": 20.5,
       "weather_code": 3,
-      "precip_prob_pct": 15
+      "precip_prob_pct": 25
     },
     {
       "date": "2026-10-01",
-      "tmax_c": 22.5,
-      "tmin_c": 19.5,
-      "weather_code": 95,
-      "precip_prob_pct": 55
+      "tmax_c": 23.2,
+      "tmin_c": 19.9,
+      "weather_code": 80,
+      "precip_prob_pct": 50
     },
     {
       "date": "2026-10-02",
       "tmax_c": 22.1,
       "tmin_c": 19.0,
       "weather_code": 80,
-      "precip_prob_pct": 33
+      "precip_prob_pct": 30
     },
     {
       "date": "2026-10-03",
-      "tmax_c": 20.2,
-      "tmin_c": 18.2,
+      "tmax_c": 19.8,
+      "tmin_c": 18.1,
+      "weather_code": 95,
+      "precip_prob_pct": 49
+    },
+    {
+      "date": "2026-10-04",
+      "tmax_c": 20.5,
+      "tmin_c": 18.8,
       "weather_code": 80,
       "precip_prob_pct": 46
     },
     {
-      "date": "2026-10-04",
-      "tmax_c": 22.8,
-      "tmin_c": 18.8,
-      "weather_code": 3,
-      "precip_prob_pct": 41
-    },
-    {
       "date": "2026-10-05",
-      "tmax_c": 23.5,
-      "tmin_c": 20.2,
+      "tmax_c": 22.3,
+      "tmin_c": 20.9,
       "weather_code": 3,
-      "precip_prob_pct": 15
+      "precip_prob_pct": 18
     },
     {
       "date": "2026-10-06",
-      "tmax_c": 24.1,
-      "tmin_c": 19.3,
-      "weather_code": 3,
-      "precip_prob_pct": 5
+      "tmax_c": 24.5,
+      "tmin_c": 20.3,
+      "weather_code": 2,
+      "precip_prob_pct": 1
     }
   ]
 }
