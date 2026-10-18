@@ -5,64 +5,64 @@
     "lon": 22.6367,
     "timezone": "Africa/Tripoli",
     "source": "open-meteo",
-    "generated_utc": "2026-10-17T21:25:10.825287+00:00"
+    "generated_utc": "2026-10-18T00:00:03.038607+00:00"
   },
   "current": {
-    "temperature_c": 18.9,
-    "feels_like_c": 20.0,
-    "humidity_pct": 76,
-    "wind_speed_kmh": 3.3,
+    "temperature_c": 17.3,
+    "feels_like_c": 17.8,
+    "humidity_pct": 86,
+    "wind_speed_kmh": 7.7,
     "weather_code": 1
   },
   "daily": [
     {
-      "date": "2026-10-17",
-      "tmax_c": 22.3,
-      "tmin_c": 19.2,
-      "weather_code": 3,
-      "precip_prob_pct": 100
-    },
-    {
       "date": "2026-10-18",
-      "tmax_c": 24.2,
-      "tmin_c": 16.8,
+      "tmax_c": 23.7,
+      "tmin_c": 16.5,
       "weather_code": 3,
-      "precip_prob_pct": 57
+      "precip_prob_pct": 0
     },
     {
       "date": "2026-10-19",
-      "tmax_c": 23.7,
-      "tmin_c": 17.0,
+      "tmax_c": 23.9,
+      "tmin_c": 16.3,
       "weather_code": 3,
       "precip_prob_pct": 0
     },
     {
       "date": "2026-10-20",
-      "tmax_c": 25.0,
-      "tmin_c": 18.0,
-      "weather_code": 61,
-      "precip_prob_pct": 22
+      "tmax_c": 23.5,
+      "tmin_c": 17.2,
+      "weather_code": 3,
+      "precip_prob_pct": 6
     },
     {
       "date": "2026-10-21",
-      "tmax_c": 28.9,
-      "tmin_c": 19.5,
+      "tmax_c": 27.5,
+      "tmin_c": 18.1,
       "weather_code": 3,
       "precip_prob_pct": 0
     },
     {
       "date": "2026-10-22",
-      "tmax_c": 30.8,
-      "tmin_c": 22.5,
+      "tmax_c": 29.0,
+      "tmin_c": 20.6,
       "weather_code": 3,
-      "precip_prob_pct": 2
+      "precip_prob_pct": 0
     },
     {
       "date": "2026-10-23",
-      "tmax_c": 25.0,
-      "tmin_c": 21.5,
+      "tmax_c": 25.1,
+      "tmin_c": 21.4,
       "weather_code": 2,
-      "precip_prob_pct": 22
+      "precip_prob_pct": 5
+    },
+    {
+      "date": "2026-10-24",
+      "tmax_c": 23.3,
+      "tmin_c": 20.2,
+      "weather_code": 3,
+      "precip_prob_pct": 5
     }
   ]
 }
